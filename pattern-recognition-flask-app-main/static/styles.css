@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(132, 129, 129);
+}
+
+/* Updated styling for title */
+.container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    display: block; /* Ensures "Assessment Tests" is on its own line */
+    margin-bottom: 5px; /* Space between title and test info */
+}
+
+.test-info h3 {
+    font-size: 18px;
+    text-align: left;
+    display: block; /* Ensures "Pattern Recognition" is on its own line */
+    margin-bottom: 10px;
+}
+
+.test-info {
+    margin-top: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.timer {
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    padding: 0;
+}
+
+/* Pattern sequence */
+.pattern-sequence {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.pattern {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ffb700;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Options */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.option-btn, 
+.submit-btn, 
+.finish-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffb700;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: fit-content; 
+    margin: 10px auto; 
+}
+
+
+.option-btn:hover, .submit-btn:hover, .finish-btn:hover {
+    background-color: #e69e00;
+}
+
+/* Message */
+.message {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.head {
+    background-color: #e69e00;
+    text-align: center;
+}
+
+/* Quiz form */
+#quiz-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Centered image container */
+.image-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+/* Centered link container */
+.link-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+/* Result container */
+.contain { 
+    text-align: center; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* Ensures the button matches the option color */
+.option-btn, 
+.submit-btn, 
+.finish-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffb700;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;  /* Ensures proper centering */
+    justify-content: center; /* Centers text inside */
+    align-items: center;
+    width: fit-content; /* Shrinks width to button content */
+    margin: 20px auto; /* Centers button horizontally */
+}
+
+/* Ensure parent container centers the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+/* Darker shade on hover */
+.option-btn:hover, .btn-primary:hover {
+    background-color: #e69e00 !important;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+.link-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.result-container {  /* Changed from 'container' */
+    text-align: center; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container itself */
+}
+
+.head {
+    text-align: center; /* Centers the main heading */
+}
+.result-container ul {
+    list-style: none; /* Removes bullets */
+    padding: 0; /* Removes default padding */
+}
+
+.result-container li {
+    margin-bottom: 10px; /* Adds spacing between answers */
+}

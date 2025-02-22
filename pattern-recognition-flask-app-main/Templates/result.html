@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Your Result:</h1>
+    <div class="result-container">
+        <h2>You scored {{ score }} out of {{ total }}</h2>
+
+        {% if score == total %}
+            <p style="color: green; font-size: 20px;">🎉 Excellent Job! You got all correct!</p>
+            <img src="{{ url_for('static', filename='images/Correct.gif') }}" alt="Success" width="200">
+        {% elif score >= total // 2 %}
+            <p style="color: orange; font-size: 20px;">😊 Good Try! Keep practicing.</p>
+            <img src="{{ url_for('static', filename='images/Almost.gif') }}" alt="Almost" width="200">
+        {% else %}
+            <p style="color: red; font-size: 20px;">❌ Try Again! You'll get better.</p>
+            <img src="{{ url_for('static', filename='images/Wrong.gif') }}" alt="Failure" width="200">
+        {% endif %}
+
+        <h3>Review Your Answers:</h3>
+        <ul>
+            {% for ans in user_answers %}
+                <li>
+                    You chose: <b>{{ ans.selected }}</b> | Correct Answer: <b>{{ ans.correct }}</b>
+                    {% if ans.selected == ans.correct %} ✅ {% else %} ❌ {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <a href="/" class="btn btn-success">Try Again</a>
+    </div>
+</body>
+</html>

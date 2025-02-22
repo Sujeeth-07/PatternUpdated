@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Recognition Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Assessment Tests</h2><br>
+        <h3>Current Test: Pattern Recognition</h3>
+        <br>
+        <p><strong>Question {{ index }} of {{ total }}</strong></p>
+
+        <form action="/question" method="POST">
+            <p><strong>{{ question.question }}</strong></p>
+            
+            <div class="pattern-sequence">
+                {% for symbol in question.sequence %}
+                    <div class="pattern">{{ symbol }}</div>
+                {% endfor %}
+            </div>
+
+            <div class="options">
+                {% for key, value in question.options.items() %}
+                    <label>
+                        <input type="radio" name="answer" value="{{ key }}" required> {{ value }}
+                    </label>
+                {% endfor %}
+            </div>
+
+            <br>
+            <div class="button-container">
+                <button type="submit" class="submit-btn">Next</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
